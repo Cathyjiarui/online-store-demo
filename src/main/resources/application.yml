@@ -1,0 +1,20 @@
+server:
+  #服务端口配置
+  port: 8088
+spring:
+  datasource:
+    #数据库相关配置
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.17.76.85:3306/online_education?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: Cathy051229*
+mybatis:
+  configuration:
+    #开启控制台打印sql
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # mybatis 下划线转驼峰配置
+    map-underscore-to-camel-case: true
+  #配置扫描
+  mapper-locations: classpath:mapper/*.xml
+  #配置xml的结果别名
+  type-aliases-package: com.example.onlinestoredemo.model.entity
